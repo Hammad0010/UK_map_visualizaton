@@ -1,7 +1,7 @@
-#UK Map Visualization with D3.js
+# UK Map Visualization with D3.js
 This project is a D3.js-based visualization of towns across the United Kingdom. It dynamically fetches town data from an API, displays the towns on an interactive map, and provides several features for user interaction and enhanced visualization.
 
-#Features
+# Features
 Data Fetching and Visualization:
 
 The application fetches town data from a remote API feed and plots them on a map of the UK.
