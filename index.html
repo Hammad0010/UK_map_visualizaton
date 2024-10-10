@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Towns Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 class="page-title">UK Map Visualization</h1>
+    
+    <div class="controls-container">
+        <label for="map-type">Select Map Type:</label>
+        <select id="map-type">
+            <option value="bubble">Bubble Map</option>
+            <option value="heatmap">Heat Map</option>
+        </select>
+
+        <label for="towns-slider">Number of Towns:</label>
+        <input type="range" id="towns-slider" min="1" max="500" value="50">
+        <span id="slider-value">50</span>
+
+        <label for="towns-input">Enter a Number:</label>
+        <input type="number" id="towns-input" min="1" max="500" value="50">
+    </div>
+
+    <button id="reload-btn">Reload Towns</button>
+
+    <div id="bubble-legend" style="display: none; text-align: center; margin-bottom: 10px;">
+        <p>Circle size represents population</p>
+        <svg width="200" height="50">
+            <circle cx="40" cy="25" r="5" fill="blue"></circle>
+            <text x="60" y="30" font-size="12px">Small Population</text>
+            <circle cx="140" cy="25" r="15" fill="blue"></circle>
+            <text x="160" y="30" font-size="12px">Large Population</text>
+        </svg>
+    </div>
+
+    <div id="map-container"></div>
+
+    <footer>
+        Data source: <a href="http://34.147.162.172/Circles/Towns/" target="_blank">Towns API</a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
